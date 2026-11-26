@@ -1,0 +1,175 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #1a1a2e;
+  color: #1a1a2e;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+
+
+.header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  padding: 36px 20px 30px;
+  background: linear-gradient(135deg, #e94560, #c72c48);
+}
+.header::after {
+  content: "🎬";
+  position: absolute;
+  right: 20px;
+  top: -10px;
+  font-size: 120px;
+  opacity: .15;
+  transform: rotate(-12deg);
+}
+.header h1 { font-size: 2rem; margin-bottom: 6px; position: relative; }
+.header p  { font-size: .9rem; opacity: .9; position: relative; }
+
+.content { padding: 28px 32px 40px; }
+
+.info {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  color: #7a5c00;
+  font-size: .85rem;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+
+section {
+  background: linear-gradient(145deg, #fff, #f8f9fb);
+  border-left: 4px solid #e94560;
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+section h2 { font-size: 1.1rem; margin-bottom: 18px; }
+
+
+.row { display: flex; gap: 20px; }
+.row .field { flex: 1; }
+.field { margin-bottom: 16px; }
+
+label { display: block; font-size: .8rem; font-weight: 600; color: #2d3748; margin-bottom: 6px; }
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"],
+input[type="date"], input[type="month"], input[type="week"], input[type="time"],
+input[type="datetime-local"], input[type="number"], input[type="search"], input[type="url"],
+select, textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: .85rem;
+  font-family: inherit;
+  border: 1.5px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, .15);
+}
+textarea { resize: vertical; }
+select[multiple] { padding: 8px 12px; }
+
+
+fieldset {
+  border: 1.5px solid #dfe3e8;
+  border-radius: 10px;
+  padding: 14px 18px 10px;
+  margin-bottom: 18px;
+}
+legend { color: #e94560; font-weight: 700; font-size: .85rem; padding: 0 8px; }
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: .85rem;
+  background: #f8f9fb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.option input { accent-color: #e94560; width: 18px; height: 18px; }
+
+
+.range { display: flex; align-items: center; gap: 14px; }
+.range input[type="range"] { flex: 1; accent-color: #e94560; }
+.range output {
+  background: #e94560;
+  color: #fff;
+  font-weight: 700;
+  font-size: .85rem;
+  min-width: 52px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 20px;
+}
+.range span { font-size: .85rem; color: #4a5568; }
+
+input[type="color"] {
+  width: 90px;
+  height: 48px;
+  padding: 4px;
+  border: 1.5px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+input[type="file"] {
+  display: inline-block;
+  padding: 10px;
+  font-size: .8rem;
+  border: 2px dashed #cfd4da;
+  border-radius: 8px;
+  background: #fafbfc;
+  cursor: pointer;
+}
+input[type="file"]:hover { border-color: #e94560; }
+
+small { display: block; font-size: .75rem; color: #4a5568; margin-top: 4px; }
+
+
+button[type="submit"] {
+  display: block;
+  margin: 10px auto 0;
+  padding: 16px 40px;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e94560, #c72c48);
+  box-shadow: 0 8px 20px rgba(233, 69, 96, .4);
+  transition: transform .15s, box-shadow .15s;
+}
+button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(233, 69, 96, .5); }
+
+
+@media (max-width: 600px) {
+  .row { flex-direction: column; gap: 0; }
+  .content { padding: 20px 14px 30px; }
+}
